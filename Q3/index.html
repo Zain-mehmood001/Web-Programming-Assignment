@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <script src="./script.js"></script>
+    <title>Job Application</title>
+</head>
+<body>
+
+    <div class="container">
+    <form id="job-application">
+        <h2>Job Application</h2>
+        <fieldset>
+            <legend>Personal Information: </legend>
+            <p>
+            <label for="fname">First Name</label>
+            <input type="text" required minlength="3" maxlength="12" id="fname" name="fname" placeholder="Enter First Name">
+            </p>
+            <p>
+            <label for="lname">Last Name</label>
+            <input type="text" required minlength="3" maxlength="12" id="lname" name="lname" placeholder="Enter Last Name">
+            </p>
+            <p>
+            <label for="phone">Phone Number</label>
+            <input type="text" required pattern="^03\d{2}\d{7}$" minlength="11" maxlength="11" id="phone" name="phone" placeholder="03XXXXXXXXX">
+            </p>
+            <p>
+            <label for="email">Email</label>
+            <input type="text" required minlength="12" maxlength="30" id="email" name="email" placeholder="youremail@youremail.com">
+            </p>
+            <p>
+            <label for="street">Street</label>
+            <input required type="text" minlength="5" maxlength="30" id="street" name="street" placeholder="27th Street">
+            </p>
+            <p>
+            <label for="city">City</label>
+            <input required type="text" minlength="5" maxlength="30" id="city" name="city" placeholder="Lahore">
+            </p>
+            <p>
+            <label for="state">State</label>
+            <input required type="text" minlength="5" maxlength="30" id="state" name="state" placeholder="27th Street">
+            </p>
+            <p>
+            <label for="zipcode">ZIP code</label>
+            <input required type="text" minlength="6" maxlength="6" id="zipcode" name="zipcode" placeholder="033456">
+            </p>
+            
+        </fieldset>
+        <fieldset>
+            <legend>Resume & Cover Letter</legend>
+            <p>
+            <label for="resume">Resume</label>
+            <input type="file" required id="file">
+            </p>
+            <p>
+            <textarea required name="coverletter" maxlength="300" placeholder="Please write your cover letter Here" id="coverletter" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Education</legend>
+            <p>
+            <label for="education">Highest level of education</label>
+            <select id="education" name="education" required>
+                <option value="primary">Primary School</option>
+                <option value="secondary">Secondary School</option>
+                <option value="high_school">High School</option>
+                <option value="bachelors">Bachelor's Degree</option>
+                <option value="masters">Master's Degree</option>
+                <option value="doctorate">Doctorate</option>
+            </select>
+            </p>
+            <p>
+            <label for="institute">Name of Educational Institute </label>
+            <input type="text" required minlength="5" maxlength="25" id="institute" name="institute" placeholder="FAST NUCES">
+            </p>
+            <p>
+            <label for="discipline">Major </label>
+            <input type="text" required minlength="5" maxlength="25" id="discipline" name="discipline" placeholder="Computer Science">
+            </p>
+            <p>
+            <label for="graduateyear">Year of Graduation</label>
+            <input type="number" required id="graduateyear" name="graduateyear"min="1980" max="2024" value="2024">
+            </p>
+            <p>
+            <textarea required name="employment history" maxlength="300" placeholder="Please list employment history here" id="emphist" cols="30" rows="5"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Previous Job Titles</legend>
+            <p>
+            <label for="companynames">Previous Companies</label>
+            <input type="text" required minlength="3" maxlength="15" id="companynames" name="companynames" placeholder="Enter previous companies comapany 1, company 2">
+            </p>
+            <p>
+                <label for="empdates">Employment Dates</label>
+                <input type="date" required id="empdates" name="empdates" placeholder="Employment dates" max="2024-01-01">
+            </p>
+            <p>
+                <textarea required name="jobresp" maxlength="150" placeholder="Please list job responsibilites here" id="jobresp" cols="30" rows="5"></textarea>
+            </p>
+
+        </fieldset>
+        <fieldset>
+            <legend>Skills</legend>
+            <p>
+                <label for="skills">Relevant Skills</label>
+                <input type="text" required minlength="3" maxlength="30" id="skills" name="skills" placeholder="C++, Java, project management ... ">
+            </p>
+            <p>
+                <label for="certs">Certifications</label>
+                <input type="text" minlength="3" maxlength="30" id="certs" name="certs" placeholder="">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Availability</legend>
+            <p>
+                <label for="startdate">Start Date</label>
+                <input type="date" required id="startdate" name="startdate" placeholder="Enter Start date" min="2024-03-05" max="2024-05-05">
+            </p>
+            <p>
+                <label for="education">Preferred Work Schedule</label>
+                <select id="workschdl" name="workschdl" required>
+                    <option value="morning">Morning Shift ( 9:00 AM - 5:00 PM )</option>
+                    <option value="night">Night Shift ( 9:00 PM - 5:00 AM )</option>
+                </select>
+            </p>            
+            
+                <label for="relocate">Are you willing to relocate ?</label>
+                <br>
+                <input type="radio" id="yes" name="relocate" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="relocate" value="no">
+                <label for="no">No</label>
+            
+        </fieldset>
+        <fieldset>
+            <legend>References</legend>
+            <p>
+            <label for="refname">Reference Name</label>
+            <input type="text" required minlength="3" maxlength="20" id="refname" name="refname" placeholder="Enter Reference Name">
+            </p>
+            <p>
+            <label for="refphone">Reference Phone Number</label>
+            <input type="text" required pattern="^03\d{2}\d{7}$" minlength="11" maxlength="11" id="refphone" name="refphone" placeholder="03XX-XXXXXXX">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Additional Questions</legend>
+            <label for="additionalq">Why do you want to work for this company?</label>
+            <br>
+            <textarea required name="additionalq" maxlength="300" placeholder="Answer here" id="additionalq" cols="30" rows="5"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Privay & Policy Agreement</legend>
+
+            
+            <input required type="checkbox" id="t&c" name="t&c" value="agree">
+            <label for="t&c">You Agree with the terms and conditions of this company</label>
+            <br>
+            <input required type="checkbox" id="privacy" name="privacy" value="agree">
+            <label for="privacy">You Agree with the privacy & policy of this company</label>
+            
+        </fieldset>
+        <button type="submit">Submit Application</button>
+    </form>
+        <button onclick="convertToTable()">View as Table</button>
+        <div id="table-container"></div>
+    </div>  
+</body>
+</html>
